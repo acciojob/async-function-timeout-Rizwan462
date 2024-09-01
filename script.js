@@ -18,7 +18,7 @@ btn.addEventListener('click', async function(e){
 });
 function delayMessage(seconds) {
 	return new Promise(res =>{
-		setTimeout(res, seconds * 1000);
+		setTimeout(res, seconds = 1000);
 	});
 	
 }
