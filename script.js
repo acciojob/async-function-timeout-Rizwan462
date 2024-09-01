@@ -13,15 +13,19 @@ btn.addEventListener('click', async function(e){
 		output.textContent = 'Please provide valid input values.'
 		return;	
 	}
+	output.textContent = '';
 	output.textContent = 'Waiting...';
 
-	await delayMessage(delay);
+	 await new Promise(resolve => setTimeout(resolve, delay));
 	output.textContent = text;
 });
-await new Promise(resolve => setTimeout(resolve, delay));
-  
-  output.textContent = text;
-});
+
+function delayMessage(milliseconds) {
+	return new Promise(res =>{
+		setTimeout(res, milliseconds);
+	});
+	
+}
 
 
 
