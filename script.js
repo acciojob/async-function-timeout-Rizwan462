@@ -18,9 +18,9 @@ btn.addEventListener('click', async function(e){
 	await delayMessage(delay);
 	output.textContent = text;
 });
-function delayMessage(seconds) {
+function delayMessage(milliseconds) {
 	return new Promise(res =>{
-		setTimeout(res, seconds * 1000);
+		setTimeout(res, milliseconds);
 	});
 	
 }
