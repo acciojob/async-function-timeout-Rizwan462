@@ -1,4 +1,5 @@
 //your JS code here. If required.
+document.getElementById('output').textContent = '';
 let btn = document.getElementById('btn');
 
 btn.addEventListener('click', async function(e){
@@ -6,6 +7,7 @@ btn.addEventListener('click', async function(e){
 	const text = document.getElementById('text').value;
 	const delay = parseInt(document.getElementById('delay').value);
 	const output = document.getElementById('output');
+	
 
 	if(!text || isNaN(delay) || delay < 0) {
 		output.textContent = 'Please provide valid input values.'
@@ -18,7 +20,7 @@ btn.addEventListener('click', async function(e){
 });
 function delayMessage(seconds) {
 	return new Promise(res =>{
-		setTimeout(res, seconds = 1000);
+		setTimeout(res, seconds * 1000);
 	});
 	
 }
