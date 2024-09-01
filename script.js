@@ -1,5 +1,5 @@
 //your JS code here. If required.
-document.getElementById('output').textContent = '';
+
 let btn = document.getElementById('btn');
 
 btn.addEventListener('click', async function(e){
@@ -18,12 +18,10 @@ btn.addEventListener('click', async function(e){
 	await delayMessage(delay);
 	output.textContent = text;
 });
-function delayMessage(milliseconds) {
-	return new Promise(res =>{
-		setTimeout(res, milliseconds);
-	});
-	
-}
+await new Promise(resolve => setTimeout(resolve, delay));
+  
+  output.textContent = text;
+});
 
 
 
